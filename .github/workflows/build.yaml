@@ -14,7 +14,7 @@ jobs:
           outputFile: src/resume.pdf
           pdfOptions: '{"format": "A2", "margin": {"top": "0", "left": "0", "right": "0", "bottom": "0"}}'
       - name: Upload resume
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume
           path: src/resume.pdf
