@@ -137,13 +137,26 @@ li {
 
 /* Ajuste para impressão/PDF */
 @media print {
+    @page {
+        margin: 0;
+        size: A4;
+    }
+
     body {
         margin: 0;
-        padding: 0;
-        max-width: 100%;
+        padding: 40px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    .no-print {
+        display: none;
+    }
+    
     a {
-        color: #000;
         text-decoration: none;
+        color: #000;
     }
 }

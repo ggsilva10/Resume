@@ -1,20 +1,32 @@
-name: Build resume
-on: 
+name: Generate Resume PDF
+
+on:
   push:
-    paths: ['src/**']
+    branches:
+      - main
+
 jobs:
-  build_pdf:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Generate PDF
-        uses: fifsky/html-to-pdf-action@master
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
         with:
-          htmlFile: src/index.html
-          outputFile: src/resume.pdf
-          pdfOptions: '{"format": "A2", "margin": {"top": "0", "left": "0", "right": "0", "bottom": "0"}}'
-      - name: Upload resume
+          node-version: 18
+
+      - name: Instalar dependências (Puppeteer)
+        run: npm install
+
+      - name: Gerar PDF
+        run: node generate.js
+
+      - name: Upload do PDF como artefato
         uses: actions/upload-artifact@v4
         with:
-          name: resume
-          path: src/resume.pdf
+          name: curriculo-gustavo
+          path: resume.pdf
+          retention-days: 5

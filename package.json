@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "[![Build PDF](https://github.com/ggsilva10/resume/actions/workflows/build.yaml/badge.svg)](https://github.com/rodzera/resume/actions/workflows/build.yaml)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggsilva10/Resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ggsilva10/Resume/issues"
+  },
+  "homepage": "https://github.com/ggsilva10/Resume#readme",
+  "dependencies": {
+    "puppeteer": "^24.31.0"
+  }
+}
