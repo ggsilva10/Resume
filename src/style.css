@@ -3,7 +3,7 @@
 html {
     font-family: "Roboto", sans-serif;
     color: #333;
-    font-size: 14px; /* Levemente menor para caber tudo bem */
+    font-size: 14px; 
     line-height: 1.5;
 }
 
@@ -36,7 +36,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #2c3e50; /* Cor escura para imprimir bem */
+    color: #2c3e50;
     font-weight: 500;
 }
 
@@ -51,15 +51,13 @@ h2 {
     color: #000;
 }
 
-/* Organização Geral - SEM GRID COMPLEXO */
 main {
-    display: block; /* Garante leitura linear */
+    display: block; 
 }
 
-/* Habilidades em colunas visuais, mas lógicas */
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Aqui pode usar grid pois são itens curtos */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -112,7 +110,7 @@ ul {
 
 li {
     margin-bottom: 4px;
-    text-align: left; /* Justificado pode criar espaços estranhos */
+    text-align: left;
 }
 
 .tools {
@@ -143,18 +141,46 @@ li {
     }
 
     body {
-        margin: 0;
-        padding: 40px;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        padding: 25px 30px !important; 
         width: 100%;
         box-sizing: border-box;
+        font-size: 13px; 
     }
 
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+        margin-top: 15px; 
+        margin-bottom: 8px; 
+        padding-bottom: 2px;
+    }
+
+    h3 {
+        margin-top: 8px;
+        margin-bottom: 2px;
+        font-size: 1rem;
+    }
+
+    /* Compactar Listas e Parágrafos */
+    p, li {
+        margin-bottom: 2px;
+        line-height: 1.4;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    /* Esconder elementos desnecessários na impressão */
     .no-print {
         display: none;
     }
-    
+
     a {
         text-decoration: none;
         color: #000;
