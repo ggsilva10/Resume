@@ -3,7 +3,8 @@ name: Generate Resume PDF
 on:
   push:
     branches:
-      - main
+      - master
+  workflow_dispatch: # Permite rodar a action manualmente !
 
 jobs:
   build:
@@ -11,15 +12,18 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Instalar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Instalar dependências (Puppeteer)
+      - name: Instalar dependências do projeto
         run: npm install
+
+      - name: Instalar dependências de SO para o Puppeteer
+        run: sudo apt-get install -y libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxi-dev libxtst6 cups-libs libnss3 libxrandr2 libasound2 libatk1.0-0 libgtk-3-0
 
       - name: Gerar PDF
         run: node generate.js
