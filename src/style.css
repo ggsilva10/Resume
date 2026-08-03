@@ -12,6 +12,8 @@ body {
     margin: 0 auto;
     padding: 40px;
     background: #fff;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* Header Limpo */
@@ -110,7 +112,7 @@ ul {
 
 li {
     margin-bottom: 4px;
-    text-align: left;
+    text-align: justify;
 }
 
 .tools {
