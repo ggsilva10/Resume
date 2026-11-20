@@ -13,7 +13,7 @@ body {
     padding: 40px;
     background: #fff;
     text-align: justify;
-    hyphens: auto;
+    hyphens: manual;
 }
 
 /* Header Limpo */
