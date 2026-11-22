@@ -1,6 +1,6 @@
 # Resume
 
-[![Build PDF](https://github.com/ggsilva10/resume/actions/workflows/build.yaml/badge.svg)](https://github.com/rodzera/resume/actions/workflows/build.yaml)
+[![Build PDF](https://github.com/ggsilva10/resume/actions/workflows/build.yaml/badge.svg)](https://github.com/ggsilva10/resume/actions/workflows/build.yaml)
 
 
 
